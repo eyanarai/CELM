@@ -1,0 +1,37 @@
+---
+language: en
+license: mit
+tags:
+  - chest-xray
+  - cardiomegaly
+  - medical-imaging
+  - ensemble-learning
+---
+
+# 📊 Model Card: CELM — Cardiomegaly Ensemble Learning Model
+
+CELM is an ensemble deep learning model trained to detect **cardiomegaly** from frontal chest X-ray images. It combines three CNN architectures (VGG16, ResNet50, InceptionV3) into a unified ensemble classifier using a dense meta-layer.
+
+## ✅ Intended Use
+
+- Medical imaging research
+- Teaching and education
+- Decision support tool (non-diagnostic)
+
+## ⚙️ Training Details
+
+- Training data: 46,078 CXRs (balanced cardiomegaly vs. normal)
+- Source datasets: CheXpert, NIH ChestX-ray14, PadChest, VinDr-CXR
+- Preprocessing: CLAHE, normalization, augmentation (random flips, brightness, rotation)
+
+## 📈 Performance
+
+- **F1-score**: 0.97
+- **Accuracy**: 97.8%
+- **Precision**: 98.4%
+- **Recall**: 97.4%
+
+## 🔍 Limitations
+
+- Designed for binary classification (cardiomegaly vs. normal/other Findings)
+- Does not support lateral CXR or other thoracic conditions
